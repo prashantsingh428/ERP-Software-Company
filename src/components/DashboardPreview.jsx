@@ -23,7 +23,7 @@ export default function DashboardPreview() {
         <div style={{ maxWidth: '900px', margin: '0 auto', background: '#ffffff', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 32px 80px rgba(0,0,0,0.5)' }}>
           {/* Browser bar */}
           <div style={{ background: '#1e293b', padding: '10px 14px', display: 'flex', alignItems: 'center', gap: '6px', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-            {['#ef4444','#f59e0b','#22c55e'].map(c => <div key={c} style={{ width: '10px', height: '10px', borderRadius: '50%', background: c }} />)}
+            {['#ef4444', '#f59e0b', '#22c55e'].map(c => <div key={c} style={{ width: '10px', height: '10px', borderRadius: '50%', background: c }} />)}
             <div style={{ flex: 1, background: '#0f172a', borderRadius: '4px', padding: '3px 10px', fontSize: '0.65rem', color: '#64748b', textAlign: 'center', marginLeft: '6px' }}>
               app.margerp.com/dashboard
             </div>
@@ -35,8 +35,19 @@ export default function DashboardPreview() {
             {/* Sidebar */}
             <div style={{ width: '155px', background: '#0f172a', flexShrink: 0, padding: '0.75rem 0' }}>
               <div style={{ padding: '0.5rem 1rem 1rem', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
-                <span style={{ fontWeight: '800', color: '#ffffff', fontSize: '0.875rem' }}>Marg<span style={{ color: '#3b82f6' }}>ERP</span></span>
-                <div style={{ fontSize: '0.58rem', color: '#475569', marginTop: '1px' }}>FY 2025-26</div>
+                <img
+                  src="/logo.png"
+                  alt="MargERP Logo"
+                  style={{
+                    width: '100%',
+                    maxWidth: '115px',
+                    height: 'auto',
+                    display: 'block',
+                    objectFit: 'contain',
+                    imageRendering: 'crisp-edges',
+                  }}
+                />
+                <div style={{ fontSize: '0.58rem', color: '#475569', marginTop: '4px' }}>FY 2025-26</div>
               </div>
               {sideLinks.map((link, i) => (
                 <div key={link} style={{
@@ -91,7 +102,7 @@ export default function DashboardPreview() {
                 <div style={{ background: '#fff', borderRadius: '6px', padding: '0.7rem', border: '1px solid #e5e7eb' }}>
                   <div style={{ fontSize: '0.62rem', fontWeight: '600', color: '#374151', marginBottom: '0.4rem' }}>Monthly Sales Trend</div>
                   <div style={{ display: 'flex', alignItems: 'flex-end', gap: '3px', height: '55px' }}>
-                    {[55,70,48,80,65,90,72,85,60,95,78,100].map((h, i) => (
+                    {[55, 70, 48, 80, 65, 90, 72, 85, 60, 95, 78, 100].map((h, i) => (
                       <div key={i} style={{ flex: 1, height: `${h}%`, borderRadius: '2px 2px 0 0', background: i === 11 ? '#1e40af' : '#bfdbfe' }} />
                     ))}
                   </div>
@@ -105,7 +116,7 @@ export default function DashboardPreview() {
                       boxShadow: 'inset 0 0 0 15px white',
                     }} />
                   </div>
-                  {[['Pharma','40%','#1e40af'],['Retail','25%','#4f46e5'],['FMCG','20%','#047857'],['Other','15%','#b45309']].map(([l,p,c]) => (
+                  {[['Pharma', '40%', '#1e40af'], ['Retail', '25%', '#4f46e5'], ['FMCG', '20%', '#047857'], ['Other', '15%', '#b45309']].map(([l, p, c]) => (
                     <div key={l} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.56rem', color: '#6b7280', marginBottom: '2px' }}>
                       <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
                         <div style={{ width: '5px', height: '5px', borderRadius: '50%', background: c }} />{l}
@@ -123,10 +134,10 @@ export default function DashboardPreview() {
                   <span style={{ fontSize: '0.58rem', color: '#1e40af', cursor: 'pointer' }}>View All</span>
                 </div>
                 {[
-                  ['INV-2026-0342','Ravi Medical Store','18 Mar','₹18,400',true],
-                  ['INV-2026-0341','Sharma Distributors','17 Mar','₹52,200',false],
-                  ['INV-2026-0340','Anand Pharma','17 Mar','₹9,750',true],
-                ].map(([inv,party,date,amt,paid]) => (
+                  ['INV-2026-0342', 'Ravi Medical Store', '18 Mar', '₹18,400', true],
+                  ['INV-2026-0341', 'Sharma Distributors', '17 Mar', '₹52,200', false],
+                  ['INV-2026-0340', 'Anand Pharma', '17 Mar', '₹9,750', true],
+                ].map(([inv, party, date, amt, paid]) => (
                   <div key={inv} style={{ display: 'grid', gridTemplateColumns: '1.5fr 2fr 1fr 1fr 1fr', padding: '0.4rem 0.75rem', borderBottom: '1px solid #f9fafb', alignItems: 'center' }}>
                     <span style={{ fontSize: '0.58rem', color: '#1e40af', fontWeight: '600' }}>{inv}</span>
                     <span style={{ fontSize: '0.58rem', color: '#374151' }}>{party}</span>
@@ -144,7 +155,7 @@ export default function DashboardPreview() {
 
         {/* Feature pills */}
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.6rem', marginTop: '2.5rem' }}>
-          {['Real-time Sync','Multi-branch Support','Auto GST Filing','Cloud Backup','Role-based Access','Audit Trail'].map(f => (
+          {['Real-time Sync', 'Multi-branch Support', 'Auto GST Filing', 'Cloud Backup', 'Role-based Access', 'Audit Trail'].map(f => (
             <span key={f} style={{
               background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)',
               color: '#94a3b8', padding: '0.35rem 0.9rem', borderRadius: '4px', fontSize: '0.78rem', fontWeight: '500',
