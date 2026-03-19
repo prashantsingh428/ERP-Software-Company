@@ -1,17 +1,36 @@
-# React + Vite
+# MargERP SaaS Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, professional ERP landing page featuring advanced GSAP animations, interactive 3D effects, and a detailed dashboard demo.
 
-Currently, two official plugins are available:
+## Features
+- **Advanced GSAP UI**: Implements high-end interaction patterns (Spotlight cards, Magnetic buttons, Decrypted text).
+- **Interactive Dashboard**: A comprehensive ERP dashboard mockup with 3D perspective tilt and live metrics.
+- **Modern Tech Stack**: React (Vite), GSAP, Lucide Icons, and Tailwind CSS.
+- **Production Ready**: Optimized assets and clean build process.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Getting Started
 
-## React Compiler
+### Installation
+```bash
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Development
+```bash
+npm run dev
+```
 
-## Expanding the ESLint configuration
+### Build for Production
+```bash
+npm run build
+```
+The build artifacts will be located in the `dist/` directory.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# ERP-Software-Company
+## Deployment
+This project is a static site (SPA) and can be deployed to any major hosting provider:
+- **Vercel/Netlify**: Just connect your repository; the build settings are automatically detected.
+- **GitHub Pages**: Use the `gh-pages` branch or the build action.
+- **Manual**: Upload the contents of the `dist/` folder to your server.
+
+## Troubleshooting
+If you encounter any icon-related issues, ensure `lucide-react` is correctly imported. All animations are powered by `gsap` which is included as a dependency.

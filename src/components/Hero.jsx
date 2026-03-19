@@ -129,11 +129,11 @@ export default function Hero() {
 
       <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%', position: 'relative', zIndex: 3 }}>
 
-        {/* ── HERO CONTENT (centered, no dashboard) ── */}
-        <div style={{ maxWidth: '700px' }}>
+        {/* ── HERO CONTENT (Centered) ── */}
+        <div style={{ maxWidth: '850px', margin: '0 auto', textAlign: 'center' }}>
 
           {/* Tags */}
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
+          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '0.5rem', marginBottom: '2rem' }}>
             {tags.map(t => (
               <span key={t} className="hero-tag" style={{
                 background: 'rgba(30,64,175,0.2)', color: '#93c5fd',
@@ -147,25 +147,23 @@ export default function Hero() {
           </div>
 
           <h1 className="hero-heading" style={{
-            fontSize: 'clamp(2.5rem, 6vw, 4rem)',
+            fontSize: 'clamp(2.5rem, 6vw, 4.2rem)',
             fontWeight: '900', color: '#ffffff',
-            lineHeight: '1.08', marginBottom: '1.25rem',
+            lineHeight: '1.1', marginBottom: '1.5rem',
             letterSpacing: '-0.03em',
           }}>
-            Complete ERP<br />
-            Solution for<br />
-            <span style={{ color: '#3b82f6' }}>Your Business</span>
+            Complete ERP Solution for <span style={{ color: '#3b82f6' }}>Your Business</span>
           </h1>
 
           <p className="hero-sub" style={{
-            fontSize: '1.1rem', color: '#94a3b8', lineHeight: '1.75',
-            marginBottom: '2.25rem', maxWidth: '520px',
+            fontSize: '1.15rem', color: '#94a3b8', lineHeight: '1.75',
+            marginBottom: '2.5rem', maxWidth: '650px', margin: '0 auto 2.5rem',
           }}>
             GST Billing, Accounting, Inventory &amp; Automation — everything your business needs in one powerful ERP platform trusted by 5 lakh+ businesses.
           </p>
 
           {/* CTA Buttons */}
-          <div className="hero-cta" style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginBottom: '2.5rem' }}>
+          <div className="hero-cta" style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center', marginBottom: '3.5rem' }}>
             <a href="#contact" className="btn-primary">
               Request Free Demo <ArrowRight size={16} />
             </a>
@@ -178,7 +176,7 @@ export default function Hero() {
           </div>
 
           {/* Social proof */}
-          <div className="hero-proof" style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap', paddingTop: '2rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
+          <div className="hero-proof" style={{ display: 'flex', gap: '2.5rem', justifyContent: 'center', flexWrap: 'wrap', paddingTop: '2.5rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
             {[
               { icon: <Star size={13} fill="#f59e0b" color="#f59e0b" />, text: '4.9 / 5 Rating' },
               { icon: <Users size={13} color="#3b82f6" />, text: '5 Lakh+ Users' },

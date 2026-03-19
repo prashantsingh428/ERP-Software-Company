@@ -50,8 +50,7 @@ export default function IndustrySolutions() {
                 border: '1px solid #e5e7eb', boxShadow: '0 1px 4px rgba(0,0,0,0.04)',
               }}
             >
-              {/* Icon strip accent */}
-              <div style={{ width: '4px', height: '40px', background: ind.accent, borderRadius: '2px', float: 'right', marginLeft: '1rem' }} />
+              {/* Icon strip accent removed */}
               <div style={{ fontSize: '2.25rem', marginBottom: '0.75rem' }}>{ind.emoji}</div>
               <h3 style={{ fontSize: '1.1rem', fontWeight: '800', color: '#111827', marginBottom: '0.5rem' }}>{ind.name}</h3>
               <p style={{ color: '#6b7280', fontSize: '0.875rem', lineHeight: '1.65', marginBottom: '1.25rem' }}>{ind.desc}</p>
