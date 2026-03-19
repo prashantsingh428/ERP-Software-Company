@@ -22,11 +22,13 @@ export default function Footer() {
               </div>
               <div>
                 <span style={{ fontWeight: '800', fontSize: '1rem', color: '#ffffff' }}>Guru Kripa <span style={{ color: '#3b82f6' }}>Pharmacy</span></span>
-                <div style={{ fontSize: '0.58rem', color: '#475569', marginTop: '1px' }}>Smart Business Software</div>
+                <div style={{ fontSize: '0.6rem', color: '#94a3b8', marginTop: '2px', fontWeight: '500' }}>
+                  Managed by <span style={{ color: '#e2e8f0' }}>Varunjeet</span> | Kanpur
+                </div>
               </div>
             </div>
             <p style={{ color: '#64748b', fontSize: '0.825rem', lineHeight: '1.7', marginBottom: '1.5rem', maxWidth: '240px' }}>
-              Your most trusted business software — GST billing, accounting, and inventory for pharmacies and more.
+              Your most trusted business software — GST billing, accounting, and inventory for pharmacies and more. Trusted by businesses in Kanpur and across India.
             </p>
             <a
               href="https://wa.me/919999999999"

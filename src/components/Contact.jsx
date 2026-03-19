@@ -45,7 +45,7 @@ export default function Contact() {
               {[
                 { icon: <Phone size={16} />, label: 'Call Us', value: '+91-9999-999-999', href: 'tel:+919999999999' },
                 { icon: <Mail size={16} />, label: 'Email', value: 'sales@Guru Kripa Pharmacy.com', href: 'mailto:sales@Guru Kripa Pharmacy.com' },
-                { icon: <MapPin size={16} />, label: 'Head Office', value: 'New Delhi, India', href: '#' },
+                { icon: <MapPin size={16} />, label: 'Head Office', value: 'Kanpur, India', href: '#' },
                 { icon: <Clock size={16} />, label: 'Working Hours', value: 'Mon–Sat, 9am–7pm IST', href: '#' },
               ].map(c => (
                 <a key={c.label} href={c.href} style={{ display: 'flex', gap: '0.75rem', marginBottom: '1.1rem', textDecoration: 'none' }}>
