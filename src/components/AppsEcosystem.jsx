@@ -20,7 +20,7 @@ export default function AppsEcosystem() {
           </h2>
           <div className="section-divider" />
           <p style={{ fontSize: '1rem', color: '#6b7280', maxWidth: '540px', margin: '0 auto', lineHeight: '1.75' }}>
-            Purpose-built apps that connect seamlessly with Guru Kripa Pharmacy for end-to-end visibility and control across your operations.
+            Purpose-built apps that connect seamlessly with Gurunanak Pharmacy for end-to-end visibility and control across your operations.
           </p>
         </div>
 

@@ -17,7 +17,7 @@ export default function Contact() {
   const focus = e => (e.target.style.borderColor = '#1e40af')
   const blur = e => (e.target.style.borderColor = '#d1d5db')
 
-  const wa = `https://wa.me/919999999999?text=${encodeURIComponent("Hi! I'm interested in learning more about Guru Kripa Pharmacy.")}`
+  const wa = `https://wa.me/919999999999?text=${encodeURIComponent("Hi! I'm interested in learning more about Gurunanak Pharmacy.")}`
 
   return (
     <section id="contact" style={{ padding: '6rem 1.5rem', background: '#ffffff' }}>
@@ -44,7 +44,7 @@ export default function Contact() {
 
               {[
                 { icon: <Phone size={16} />, label: 'Call Us', value: '+91-9999-999-999', href: 'tel:+919999999999' },
-                { icon: <Mail size={16} />, label: 'Email', value: 'sales@Guru Kripa Pharmacy.com', href: 'mailto:sales@Guru Kripa Pharmacy.com' },
+                { icon: <Mail size={16} />, label: 'Email', value: 'sales@Gurunanak Pharmacy.com', href: 'mailto:sales@Gurunanak Pharmacy.com' },
                 { icon: <MapPin size={16} />, label: 'Head Office', value: 'Kanpur, India', href: '#' },
                 { icon: <Clock size={16} />, label: 'Working Hours', value: 'Mon–Sat, 9am–7pm IST', href: '#' },
               ].map(c => (

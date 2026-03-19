@@ -4,12 +4,12 @@ const testimonials = [
   {
     name: 'Rajesh Agarwal', avatar: 'RA', role: 'Owner, Agarwal Pharma Distributors', location: 'Delhi',
     color: '#1e40af', bg: '#eff6ff',
-    text: 'Guru Kripa Pharmacy transformed our pharma distribution business. Batch tracking, schedule H compliance, and auto-GST filing save us hours every day. Switched from Excel — best decision we made.',
+    text: 'Gurunanak Pharmacy transformed our pharma distribution business. Batch tracking, schedule H compliance, and auto-GST filing save us hours every day. Switched from Excel — best decision we made.',
   },
   {
     name: 'Priya Sharma', avatar: 'PS', role: 'CFO, Sharma Retail Chain', location: 'Mumbai',
     color: '#4f46e5', bg: '#eef2ff',
-    text: 'Our 12 stores are perfectly synced now. The eOwner app gives me real-time P&L reports on my phone. I recommended Guru Kripa Pharmacy to every retail business owner I know.',
+    text: 'Our 12 stores are perfectly synced now. The eOwner app gives me real-time P&L reports on my phone. I recommended Gurunanak Pharmacy to every retail business owner I know.',
   },
   {
     name: 'Suresh Gupta', avatar: 'SG', role: 'MD, Gupta FMCG Distribution', location: 'Jaipur',
@@ -19,7 +19,7 @@ const testimonials = [
   {
     name: 'Anjali Mehta', avatar: 'AM', role: 'Director, MedLife Wholesale', location: 'Hyderabad',
     color: '#b45309', bg: '#fffbeb',
-    text: 'PharmaNXT is purpose-built for pharma wholesale. Drug licence management and expiry alerts are completely automated. The Guru Kripa Pharmacy support team is always responsive.',
+    text: 'PharmaNXT is purpose-built for pharma wholesale. Drug licence management and expiry alerts are completely automated. The Gurunanak Pharmacy support team is always responsive.',
   },
   {
     name: 'Vikram Patel', avatar: 'VP', role: 'CEO, Patel Supermart', location: 'Ahmedabad',

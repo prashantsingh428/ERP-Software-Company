@@ -499,7 +499,7 @@ export default function DashboardPreview() {
               gap: '4px'
             }}>
               <Lock size={12} color="#3b82f6" />
-              <span>https://app.Guru Kripa Pharmacy.com/dashboard</span>
+              <span>https://app.Gurunanak Pharmacy.com/dashboard</span>
             </div>
 
             <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
@@ -533,14 +533,14 @@ export default function DashboardPreview() {
               {/* Logo */}
               <div style={{ padding: '0 1.25rem 1.5rem', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
                 <div ref={logoRef} style={{ display: 'inline-block', cursor: 'pointer' }}>
-                  <div style={{ 
-                    fontWeight: '800', 
-                    fontSize: '0.95rem', 
-                    color: '#ffffff', 
+                  <div style={{
+                    fontWeight: '800',
+                    fontSize: '0.95rem',
+                    color: '#ffffff',
                     letterSpacing: '-0.02em',
                     lineHeight: '1.2'
                   }}>
-                    Guru Kripa <br />
+                    Gurunanak <br />
                     <span style={{ color: '#3b82f6' }}>Pharmacy</span>
                   </div>
                 </div>
@@ -985,7 +985,7 @@ export default function DashboardPreview() {
             Ready to Transform Your Business?
           </h3>
           <p style={{ fontSize: '1rem', color: '#94a3b8', maxWidth: '500px', margin: '0 auto 2rem' }}>
-            Join thousands of businesses already using Guru Kripa Pharmacy to streamline their operations
+            Join thousands of businesses already using Gurunanak Pharmacy to streamline their operations
           </p>
           <button
             ref={ctaRef}

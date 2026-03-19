@@ -47,7 +47,7 @@ export default function Navbar() {
               letterSpacing: '-0.02em',
               whiteSpace: 'nowrap'
             }}>
-              Guru Kripa <span style={{ color: '#3b82f6' }}>Pharmacy</span>
+              Gurunanak <span style={{ color: '#3b82f6' }}>Pharmacy</span>
             </span>
             <div style={{ fontSize: '0.6rem', color: scrolled ? '#9ca3af' : '#94a3b8', marginTop: '-2px', fontWeight: '500' }}>
               Smart Business Software

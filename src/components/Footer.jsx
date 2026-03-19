@@ -21,7 +21,7 @@ export default function Footer() {
                 <span style={{ color: 'white', fontWeight: '900', fontSize: '1rem' }}>G</span>
               </div>
               <div>
-                <span style={{ fontWeight: '800', fontSize: '1rem', color: '#ffffff' }}>Guru Kripa <span style={{ color: '#3b82f6' }}>Pharmacy</span></span>
+                <span style={{ fontWeight: '800', fontSize: '1rem', color: '#ffffff' }}>Gurunanak <span style={{ color: '#3b82f6' }}>Pharmacy</span></span>
                 <div style={{ fontSize: '0.6rem', color: '#94a3b8', marginTop: '2px', fontWeight: '500' }}>
                   Managed by <span style={{ color: '#e2e8f0' }}>Varunjeet</span> | Kanpur
                 </div>
@@ -69,7 +69,7 @@ export default function Footer() {
         {/* Bottom */}
         <div style={{ paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
           <div style={{ color: '#475569', fontSize: '0.8rem' }}>
-            © 2026 Guru Kripa Pharmacy Software Pvt. Ltd. All rights reserved. Made in India 🇮🇳
+            © 2026 Gurunanak Pharmacy Software Pvt. Ltd. All rights reserved. Made in India 🇮🇳
           </div>
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
             {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map(item => (
