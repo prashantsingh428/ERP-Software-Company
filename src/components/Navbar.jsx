@@ -2,13 +2,14 @@ import { useState, useEffect } from 'react'
 import { Menu, X, Phone } from 'lucide-react'
 
 const navItems = [
+  { label: 'Products', type: 'navigate' },
   { label: 'Features', href: '#features' },
   { label: 'Apps', href: '#apps' },
   { label: 'Solutions', href: '#solutions' },
   { label: 'Contact', href: '#contact' },
 ]
 
-export default function Navbar() {
+export default function Navbar({ onNavigateToProducts }) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -60,7 +61,13 @@ export default function Navbar() {
           {navItems.map(item => (
             <a
               key={item.label}
-              href={item.href}
+              href={item.href || '#'}
+              onClick={(e) => {
+                if (item.type === 'navigate') {
+                  e.preventDefault();
+                  onNavigateToProducts();
+                }
+              }}
               className="nav-link"
               style={{ color: textColor }}
             >
@@ -98,8 +105,14 @@ export default function Navbar() {
           {navItems.map(item => (
             <a
               key={item.label}
-              href={item.href}
-              onClick={() => setMenuOpen(false)}
+              href={item.href || '#'}
+              onClick={(e) => {
+                setMenuOpen(false);
+                if (item.type === 'navigate') {
+                  e.preventDefault();
+                  onNavigateToProducts();
+                }
+              }}
               style={{ display: 'block', padding: '0.65rem 0', color: '#374151', textDecoration: 'none', fontWeight: '500', fontSize: '0.9rem', borderBottom: '1px solid #f3f4f6' }}
             >
               {item.label}

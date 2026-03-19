@@ -1,14 +1,14 @@
 import { MessageCircle } from 'lucide-react'
 
 const footerLinks = {
-  Product: ['Features', 'Dashboard', 'Integrations', 'Changelog'],
+  Product: ['Medicine Shop', 'Features', 'Dashboard', 'Integrations', 'Changelog'],
   Solutions: ['Pharma & Healthcare', 'Retail', 'Distribution', 'FMCG', 'Enterprise'],
   Apps: ['eRetail', 'eOrder', 'eOwner', 'eDelivery', 'SFAXpert', 'PharmaNXT'],
   Company: ['About Us', 'Blog', 'Careers', 'Press', 'Contact'],
   Support: ['Help Center', 'Video Tutorials', 'API Docs', 'Community', 'Status Page'],
 }
 
-export default function Footer() {
+export default function Footer({ onNavigateToProducts }) {
   return (
     <footer style={{ background: '#0f172a', color: 'white', padding: '4rem 1.5rem 2rem' }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
@@ -53,7 +53,14 @@ export default function Footer() {
                 {links.map(link => (
                   <a
                     key={link}
-                    href="#"
+                    href={link === 'Medicine Shop' ? '#' : `/#${link.toLowerCase()}`}
+                    onClick={(e) => {
+                      if (link === 'Medicine Shop') {
+                        e.preventDefault();
+                        onNavigateToProducts();
+                        window.scrollTo(0, 0); // Scroll to top for the new page
+                      }
+                    }}
                     style={{ color: '#64748b', fontSize: '0.825rem', textDecoration: 'none', transition: 'color 0.15s' }}
                     onMouseEnter={e => (e.target.style.color = '#e2e8f0')}
                     onMouseLeave={e => (e.target.style.color = '#64748b')}
