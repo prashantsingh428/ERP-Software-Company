@@ -9,6 +9,7 @@ import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ProductPage from './components/ProductPage'
+import WhatsAppButton from './components/WhatsAppButton'
 
 function App() {
   const [view, setView] = useState('home') // 'home' or 'products'
@@ -36,6 +37,7 @@ function App() {
       )}
       
       <Footer onNavigateToProducts={() => setView('products')} />
+      <WhatsAppButton />
     </div>
   )
 }
