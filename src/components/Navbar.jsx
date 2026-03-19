@@ -9,7 +9,7 @@ const navItems = [
   { label: 'Contact', href: '#contact' },
 ]
 
-export default function Navbar({ onNavigateToProducts }) {
+export default function Navbar({ onNavigateToProducts, onGoHome, isProductPage }) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -32,7 +32,10 @@ export default function Navbar({ onNavigateToProducts }) {
     }}>
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '64px' }}>
         {/* Logo */}
-        <a href="#" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}>
+        <div 
+          onClick={(e) => { e.preventDefault(); onGoHome(); }} 
+          style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.6rem', textDecoration: 'none' }}
+        >
           <div style={{
             width: '36px', height: '36px', borderRadius: '6px',
             background: '#1e40af', display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -54,7 +57,7 @@ export default function Navbar({ onNavigateToProducts }) {
               Smart Business Software
             </div>
           </div>
-        </a>
+        </div>
 
         {/* Desktop Nav */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }} className="nav-desktop">
@@ -66,10 +69,17 @@ export default function Navbar({ onNavigateToProducts }) {
                 if (item.type === 'navigate') {
                   e.preventDefault();
                   onNavigateToProducts();
+                } else if (item.href === '#' || isProductPage) {
+                  e.preventDefault();
+                  onGoHome();
                 }
               }}
               className="nav-link"
-              style={{ color: textColor }}
+              style={{ 
+                color: textColor,
+                fontWeight: (item.type === 'navigate' && isProductPage) ? '700' : '500',
+                opacity: (item.type === 'navigate' && isProductPage) ? 1 : 0.8
+              }}
             >
               {item.label}
             </a>

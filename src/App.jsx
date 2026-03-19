@@ -13,20 +13,28 @@ import ProductPage from './components/ProductPage'
 function App() {
   const [view, setView] = useState('home') // 'home' or 'products'
 
-  if (view === 'products') {
-    return <ProductPage onGoHome={() => setView('home')} />
-  }
-
   return (
     <div className="overflow-hidden">
-      <Navbar onNavigateToProducts={() => setView('products')} />
-      <Hero />
-      <Features />
-      <AppsEcosystem />
-      <DashboardPreview />
-      <IndustrySolutions />
-      <Testimonials />
-      <Contact />
+      <Navbar 
+        onNavigateToProducts={() => setView('products')} 
+        onGoHome={() => setView('home')} 
+        isProductPage={view === 'products'}
+      />
+      
+      {view === 'home' ? (
+        <>
+          <Hero />
+          <Features />
+          <AppsEcosystem />
+          <DashboardPreview />
+          <IndustrySolutions />
+          <Testimonials />
+          <Contact />
+        </>
+      ) : (
+        <ProductPage onGoHome={() => setView('home')} />
+      )}
+      
       <Footer onNavigateToProducts={() => setView('products')} />
     </div>
   )
