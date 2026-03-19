@@ -1,7 +1,7 @@
 import { MessageCircle } from 'lucide-react'
 
 const footerLinks = {
-  Product: ['Features', 'Pricing', 'Dashboard', 'Integrations', 'Changelog'],
+  Product: ['Features', 'Dashboard', 'Integrations', 'Changelog'],
   Solutions: ['Pharma & Healthcare', 'Retail', 'Distribution', 'FMCG', 'Enterprise'],
   Apps: ['eRetail', 'eOrder', 'eOwner', 'eDelivery', 'SFAXpert', 'PharmaNXT'],
   Company: ['About Us', 'Blog', 'Careers', 'Press', 'Contact'],
@@ -18,15 +18,15 @@ export default function Footer() {
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '1rem' }}>
               <div style={{ width: '34px', height: '34px', borderRadius: '6px', background: '#1e40af', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                <span style={{ color: 'white', fontWeight: '900', fontSize: '1rem' }}>M</span>
+                <span style={{ color: 'white', fontWeight: '900', fontSize: '1rem' }}>G</span>
               </div>
               <div>
-                <span style={{ fontWeight: '800', fontSize: '1rem', color: '#ffffff' }}>Marg<span style={{ color: '#3b82f6' }}>ERP</span></span>
+                <span style={{ fontWeight: '800', fontSize: '1rem', color: '#ffffff' }}>Guru Kripa <span style={{ color: '#3b82f6' }}>Pharmacy</span></span>
                 <div style={{ fontSize: '0.58rem', color: '#475569', marginTop: '1px' }}>Smart Business Software</div>
               </div>
             </div>
             <p style={{ color: '#64748b', fontSize: '0.825rem', lineHeight: '1.7', marginBottom: '1.5rem', maxWidth: '240px' }}>
-              India's most trusted ERP software — GST billing, accounting, and inventory for 5 lakh+ businesses.
+              Your most trusted business software — GST billing, accounting, and inventory for pharmacies and more.
             </p>
             <a
               href="https://wa.me/919999999999"
@@ -67,7 +67,7 @@ export default function Footer() {
         {/* Bottom */}
         <div style={{ paddingTop: '1.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
           <div style={{ color: '#475569', fontSize: '0.8rem' }}>
-            © 2026 MargERP Software Pvt. Ltd. All rights reserved. Made in India 🇮🇳
+            © 2026 Guru Kripa Pharmacy Software Pvt. Ltd. All rights reserved. Made in India 🇮🇳
           </div>
           <div style={{ display: 'flex', gap: '1.5rem', flexWrap: 'wrap' }}>
             {['Privacy Policy', 'Terms of Service', 'Cookie Policy'].map(item => (

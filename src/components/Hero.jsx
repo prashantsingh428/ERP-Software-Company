@@ -159,7 +159,7 @@ export default function Hero() {
             fontSize: '1.15rem', color: '#94a3b8', lineHeight: '1.75',
             marginBottom: '2.5rem', maxWidth: '650px', margin: '0 auto 2.5rem',
           }}>
-            GST Billing, Accounting, Inventory &amp; Automation — everything your business needs in one powerful ERP platform trusted by 5 lakh+ businesses.
+            GST Billing, Accounting, Inventory & Automation — everything your business needs in one powerful ERP platform trusted by businesses across the nation.
           </p>
 
           {/* CTA Buttons */}
@@ -179,8 +179,8 @@ export default function Hero() {
           <div className="hero-proof" style={{ display: 'flex', gap: '2.5rem', justifyContent: 'center', flexWrap: 'wrap', paddingTop: '2.5rem', borderTop: '1px solid rgba(255,255,255,0.08)' }}>
             {[
               { icon: <Star size={13} fill="#f59e0b" color="#f59e0b" />, text: '4.9 / 5 Rating' },
-              { icon: <Users size={13} color="#3b82f6" />, text: '5 Lakh+ Users' },
-              { icon: <Award size={13} color="#3b82f6" />, text: '25+ Years Trusted' },
+              { icon: <Users size={13} color="#3b82f6" />, text: 'Trusted by Many' },
+              { icon: <Award size={13} color="#3b82f6" />, text: 'Years of Trust' },
             ].map(item => (
               <div key={item.text} style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', fontSize: '0.825rem', color: '#94a3b8', fontWeight: '500' }}>
                 {item.icon} {item.text}

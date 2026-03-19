@@ -5,7 +5,6 @@ const navItems = [
   { label: 'Features', href: '#features' },
   { label: 'Apps', href: '#apps' },
   { label: 'Solutions', href: '#solutions' },
-  { label: 'Pricing', href: '#pricing' },
   { label: 'Contact', href: '#contact' },
 ]
 
@@ -36,12 +35,19 @@ export default function Navbar() {
           <div style={{
             width: '36px', height: '36px', borderRadius: '6px',
             background: '#1e40af', display: 'flex', alignItems: 'center', justifyContent: 'center',
+            flexShrink: 0
           }}>
-            <span style={{ color: 'white', fontWeight: '900', fontSize: '1rem' }}>M</span>
+            <span style={{ color: 'white', fontWeight: '900', fontSize: '1rem' }}>G</span>
           </div>
-          <div>
-            <span style={{ fontWeight: '800', fontSize: '1.1rem', color: scrolled ? '#0f172a' : '#ffffff', letterSpacing: '-0.02em' }}>
-              Marg<span style={{ color: '#3b82f6' }}>ERP</span>
+          <div style={{ minWidth: 0 }}>
+            <span style={{ 
+              fontWeight: '800', 
+              fontSize: '1rem', 
+              color: scrolled ? '#0f172a' : '#ffffff', 
+              letterSpacing: '-0.02em',
+              whiteSpace: 'nowrap'
+            }}>
+              Guru Kripa <span style={{ color: '#3b82f6' }}>Pharmacy</span>
             </span>
             <div style={{ fontSize: '0.6rem', color: scrolled ? '#9ca3af' : '#94a3b8', marginTop: '-2px', fontWeight: '500' }}>
               Smart Business Software

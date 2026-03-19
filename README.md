@@ -1,4 +1,4 @@
-# MargERP SaaS Landing Page
+# Guru Kripa Pharmacy SaaS Landing Page
 
 A high-performance, professional ERP landing page featuring advanced GSAP animations, interactive 3D effects, and a detailed dashboard demo.
 

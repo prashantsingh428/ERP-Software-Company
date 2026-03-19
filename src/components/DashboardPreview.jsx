@@ -17,7 +17,7 @@ const sideLinks = ['Dashboard', 'Sales', 'Purchase', 'Inventory', 'Accounts', 'G
 const useDecryptedText = (text, isHovered = true) => {
   const [displayText, setDisplayText] = useState(text);
   const chars = '-/_*+!<>[]{}0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-  
+
   useEffect(() => {
     if (!isHovered) return;
     let iteration = 0;
@@ -26,13 +26,13 @@ const useDecryptedText = (text, isHovered = true) => {
         if (index < iteration) return text[index];
         return chars[Math.floor(Math.random() * chars.length)];
       }).join(''));
-      
+
       if (iteration >= text.length) clearInterval(interval);
-      iteration += 1/3;
+      iteration += 1 / 3;
     }, 30);
     return () => clearInterval(interval);
   }, [text, isHovered]);
-  
+
   return displayText;
 };
 
@@ -115,9 +115,9 @@ export default function DashboardPreview() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [selectedTimeRange, setSelectedTimeRange] = useState('week');
   const [isHeadingHovered, setIsHeadingHovered] = useState(false);
-  
+
   const decryptedHeading = useDecryptedText("Fingertips", isHeadingHovered);
-  
+
   const sectionRef = useRef(null);
   const mockupRef = useRef(null);
   const metricsRef = useRef([]);
@@ -155,9 +155,9 @@ export default function DashboardPreview() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Mockup entry
-      gsap.fromTo(mockupRef.current, 
+      gsap.fromTo(mockupRef.current,
         { y: 100, opacity: 0, rotateX: 5 },
-        { 
+        {
           y: 0, opacity: 1, rotateX: 0, duration: 1.5, ease: "power4.out",
           scrollTrigger: {
             trigger: mockupRef.current,
@@ -181,10 +181,10 @@ export default function DashboardPreview() {
       // 3D Perspective Tilt for mockup
       const section = sectionRef.current;
       const mockup = mockupRef.current;
-      
+
       const rotateXQuick = gsap.quickTo(mockup, "rotateX", { duration: 0.5, ease: "power2" });
       const rotateYQuick = gsap.quickTo(mockup, "rotateY", { duration: 0.5, ease: "power2" });
-      
+
       const handlePerspective = (e) => {
         const { left, top, width, height } = section.getBoundingClientRect();
         const x = (e.clientX - left) / width - 0.5;
@@ -335,7 +335,7 @@ export default function DashboardPreview() {
 
       {/* Floating Glass Particles */}
       {[...Array(6)].map((_, i) => (
-        <div 
+        <div
           key={i}
           className="bg-blob"
           style={{
@@ -373,7 +373,7 @@ export default function DashboardPreview() {
             ⚡ Live Dashboard Preview
           </div>
 
-          <h2 
+          <h2
             onMouseEnter={() => setIsHeadingHovered(true)}
             onMouseLeave={() => setIsHeadingHovered(false)}
             style={{
@@ -441,8 +441,8 @@ export default function DashboardPreview() {
                   zIndex: 2,
                 }}
               >
-                <img 
-                  src={banner.image} 
+                <img
+                  src={banner.image}
                   alt={banner.title}
                   style={{
                     width: '100%',
@@ -499,7 +499,7 @@ export default function DashboardPreview() {
               gap: '4px'
             }}>
               <Lock size={12} color="#3b82f6" />
-              <span>https://app.margerp.com/dashboard</span>
+              <span>https://app.Guru Kripa Pharmacy.com/dashboard</span>
             </div>
 
             <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
@@ -533,17 +533,16 @@ export default function DashboardPreview() {
               {/* Logo */}
               <div style={{ padding: '0 1.25rem 1.5rem', borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
                 <div ref={logoRef} style={{ display: 'inline-block', cursor: 'pointer' }}>
-                  <img
-                    src="/logo.jpeg"
-                    alt="MargERP Logo"
-                    style={{
-                      width: '120px',
-                      height: 'auto',
-                      display: 'block',
-                      objectFit: 'contain',
-                      filter: 'brightness(1.2)'
-                    }}
-                  />
+                  <div style={{ 
+                    fontWeight: '800', 
+                    fontSize: '0.95rem', 
+                    color: '#ffffff', 
+                    letterSpacing: '-0.02em',
+                    lineHeight: '1.2'
+                  }}>
+                    Guru Kripa <br />
+                    <span style={{ color: '#3b82f6' }}>Pharmacy</span>
+                  </div>
                 </div>
                 <div style={{
                   display: 'flex',
@@ -689,7 +688,7 @@ export default function DashboardPreview() {
                       cursor: 'pointer'
                     }}
                   >
-                    <div 
+                    <div
                       ref={el => metricsRef.current[idx] = el}
                       onMouseEnter={(e) => gsap.to(e.currentTarget, { scale: 1.02, duration: 0.3 })}
                       onMouseLeave={(e) => gsap.to(e.currentTarget, { scale: 1, duration: 0.3 })}
@@ -758,7 +757,7 @@ export default function DashboardPreview() {
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', height: '120px', gap: '4px' }}>
                     {salesData.map((data, idx) => (
                       <div key={idx} style={{ flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                        <div 
+                        <div
                           className="sales-bar"
                           style={{
                             width: '100%',
@@ -766,7 +765,7 @@ export default function DashboardPreview() {
                             background: 'linear-gradient(180deg, #3b82f6 0%, #22c55e 100%)',
                             borderRadius: '4px 4px 0 0',
                             transition: 'height 0.3s ease'
-                          }} 
+                          }}
                         />
                         <span style={{ fontSize: '0.65rem', color: '#64748b', marginTop: '4px' }}>{data.month}</span>
                       </div>
@@ -885,11 +884,11 @@ export default function DashboardPreview() {
             gap: '12px',
             overflow: 'hidden'
           }}>
-            <div 
+            <div
               ref={sliderRef}
-              style={{ 
+              style={{
                 display: 'none' // Hidden as we only need the ref to trigger slider shifts
-              }} 
+              }}
             />
             {banners.map((banner, idx) => (
               <button
@@ -921,56 +920,56 @@ export default function DashboardPreview() {
           </div>
         </div>
 
-          {/* Feature Grid */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-            gap: '1.5rem',
-            marginTop: '3rem'
-          }}>
-            {[
-              { icon: Zap, title: 'Real-time Sync', desc: 'Instant updates across all devices and platforms' },
-              { icon: Globe, title: 'Multi-branch Support', desc: 'Manage multiple locations from one dashboard' },
-              { icon: Shield, title: 'Auto GST Filing', desc: 'Automated GST calculations and return filing' },
-              { icon: Award, title: 'Enterprise Security', desc: 'Bank-level encryption and role-based access' },
-            ].map((feature, idx) => (
-              <SpotlightCard
-                key={idx}
-                style={{
-                  background: 'rgba(255,255,255,0.03)',
-                  border: '1px solid rgba(255,255,255,0.08)',
-                  borderRadius: '16px',
-                  backdropFilter: 'blur(10px)',
-                  cursor: 'pointer'
-                }}
+        {/* Feature Grid */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gap: '1.5rem',
+          marginTop: '3rem'
+        }}>
+          {[
+            { icon: Zap, title: 'Real-time Sync', desc: 'Instant updates across all devices and platforms' },
+            { icon: Globe, title: 'Multi-branch Support', desc: 'Manage multiple locations from one dashboard' },
+            { icon: Shield, title: 'Auto GST Filing', desc: 'Automated GST calculations and return filing' },
+            { icon: Award, title: 'Enterprise Security', desc: 'Bank-level encryption and role-based access' },
+          ].map((feature, idx) => (
+            <SpotlightCard
+              key={idx}
+              style={{
+                background: 'rgba(255,255,255,0.03)',
+                border: '1px solid rgba(255,255,255,0.08)',
+                borderRadius: '16px',
+                backdropFilter: 'blur(10px)',
+                cursor: 'pointer'
+              }}
+            >
+              <div
+                ref={el => featuresRef.current[idx] = el}
+                onMouseEnter={(e) => gsap.to(e.currentTarget, { y: -5, duration: 0.3 })}
+                onMouseLeave={(e) => gsap.to(e.currentTarget, { y: 0, duration: 0.3 })}
+                style={{ padding: '1.5rem' }}
               >
-                <div 
-                  ref={el => featuresRef.current[idx] = el}
-                  onMouseEnter={(e) => gsap.to(e.currentTarget, { y: -5, duration: 0.3 })}
-                  onMouseLeave={(e) => gsap.to(e.currentTarget, { y: 0, duration: 0.3 })}
-                  style={{ padding: '1.5rem' }}
-                >
-                  <div style={{
-                    width: '48px',
-                    height: '48px',
-                    borderRadius: '12px',
-                    background: 'rgba(59,130,246,0.15)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    marginBottom: '1rem'
-                  }}>
-                    <feature.icon size={24} color="#3b82f6" />
-                  </div>
-                  <h4 style={{ fontSize: '1rem', fontWeight: '600', color: '#ffffff', marginBottom: '0.5rem' }}>
-                    {feature.title}
-                  </h4>
-                  <p style={{ fontSize: '0.85rem', color: '#94a3b8', lineHeight: '1.5' }}>
-                    {feature.desc}
-                  </p>
+                <div style={{
+                  width: '48px',
+                  height: '48px',
+                  borderRadius: '12px',
+                  background: 'rgba(59,130,246,0.15)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  marginBottom: '1rem'
+                }}>
+                  <feature.icon size={24} color="#3b82f6" />
                 </div>
-              </SpotlightCard>
-            ))}
+                <h4 style={{ fontSize: '1rem', fontWeight: '600', color: '#ffffff', marginBottom: '0.5rem' }}>
+                  {feature.title}
+                </h4>
+                <p style={{ fontSize: '0.85rem', color: '#94a3b8', lineHeight: '1.5' }}>
+                  {feature.desc}
+                </p>
+              </div>
+            </SpotlightCard>
+          ))}
         </div>
 
         {/* CTA Section */}
@@ -986,9 +985,9 @@ export default function DashboardPreview() {
             Ready to Transform Your Business?
           </h3>
           <p style={{ fontSize: '1rem', color: '#94a3b8', maxWidth: '500px', margin: '0 auto 2rem' }}>
-            Join thousands of businesses already using MargERP to streamline their operations
+            Join thousands of businesses already using Guru Kripa Pharmacy to streamline their operations
           </p>
-          <button 
+          <button
             ref={ctaRef}
             style={{
               padding: '1rem 2.5rem',

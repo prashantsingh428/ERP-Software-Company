@@ -4,7 +4,6 @@ import Features from './components/Features'
 import AppsEcosystem from './components/AppsEcosystem'
 import DashboardPreview from './components/DashboardPreview'
 import IndustrySolutions from './components/IndustrySolutions'
-import Pricing from './components/Pricing'
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
@@ -18,7 +17,6 @@ function App() {
       <AppsEcosystem />
       <DashboardPreview />
       <IndustrySolutions />
-      <Pricing />
       <Testimonials />
       <Contact />
       <Footer />
